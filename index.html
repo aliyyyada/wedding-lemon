@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Виктор &amp; Анастасия — 25.07.2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Cormorant+SC:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#ccc8be;font-family:'Cormorant Garamond',serif;max-width:430px;margin:0 auto;color:#1a2a1a}
+:root{--gd:#2e4330;--cream:#f4f1e8;--tm:#3a4a3a;--tl:#7a8a7a}
+
+/* ══ ЗЕЛЁНЫЙ HERO-БЛОК ══ */
+.hero-green{
+  background:var(--gd);
+  text-align:center;
+  
+  padding-top: 150px;
+  position:relative;
+  z-index:1;
+}
+.lemon-top{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width:90px;
+  z-index: 10;
+
+}
+
+.lemon-top img{width:100%;display:block;}
+
+
+.arch-top-circle{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  width:430px; height:430px;
+  border-radius:50%;
+  background:var(--cream);
+  margin-top: -105px;
+  z-index:2;
+}
+
+
+.hero-cream{
+  background:var(--cream);
+  text-align:center;
+  padding:24px 28px 32px;
+  position:relative;
+  margin-top:115px;
+  z-index:3;
+}
+.hero-names{font-family:'Playfair Display',serif;font-style:italic;font-size:48px;color:var(--gd);line-height:1.1; position: relative; margin-top: -120pt;}
+.hero-sub{font-family:'Cormorant SC',serif;font-size:13px;letter-spacing:1.5px;color:var(--tl);margin-top:12px}
+.hero-date{font-family:'Cormorant SC',serif;font-size:13px;letter-spacing:1.5px;color:var(--tl);margin-top:5px}
+.couple-wrap{margin:22px auto 0;width:250px;height:250px;border-radius:50%;overflow:hidden}
+.couple-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.chevron{margin:18px auto 0;width:18px;opacity:.45}
+.chevron svg{width:100%;stroke:var(--gd);fill:none;stroke-width:1.5}
+
+/* ══ SECTIONS ══ */
+.s{padding:28px 28px;background:var(--cream);text-align:center}
+.st{font-family:'Playfair Display',serif;font-style:italic;font-size:26px;color:var(--gd);margin-bottom:10px;line-height:1.2}
+.sb{font-size:15px;font-weight:300;line-height:1.5;color:var(--tm)}
+.di{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:var(--gd);margin:12px 0}
+
+.cal{background:var(--gd);border-radius:8px;padding:14px 10px 12px;margin-top:10px}
+.cal-h{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:7px;margin-bottom:4px}
+.cal-h span{font-family:'Cormorant SC',serif;font-size:11px;letter-spacing:.8px;color:rgba(255,255,255,.5);text-align:center}
+.cr{display:grid;grid-template-columns:repeat(7,1fr)}
+.cc{font-size:13px;font-weight:300;text-align:center;padding:5px 0;color:rgba(255,255,255,.72)}
+.hl span{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;border:1.5px solid rgba(255,255,255,.9);color:#fff}
+
+.loc{padding:28px 28px;background:var(--cream);text-align:center}
+.lg{display:grid;grid-template-columns:1fr 1px 1fr;margin-top:14px;align-items:start}
+.lsep{background:rgba(46,67,48,.22);align-self:stretch}
+.li{padding:0 14px;text-align:center}
+.lt{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:var(--gd);margin-bottom:7px}
+.ln,.la{font-size:13px;font-weight:300;line-height:1.5;color:var(--tm)}
+.mb{display:inline-block;margin-top:10px;padding:7px 20px;background:var(--gd);color:#fff;font-family:'Cormorant SC',serif;font-size:11px;letter-spacing:1.5px;border:none;border-radius:20px;cursor:pointer}
+
+/* ══ ЛИМОННАЯ ГРАНИЦА + PROGRAM ══
+   Белый блок заканчивается, зелёный начинается.
+   Лимоны сидят ровно на границе. */
+.loc{padding-bottom:50px} /* место под лимоны снизу */
+
+.prog-wrap{position:relative;background:var(--gd);padding:60px 28px 36px;text-align:center}
+.dc-wrap{position:relative;background:var(--cream);padding:60px 28px 36px;text-align:center}
+
+.lemon-row{
+  position:absolute;top:-50px;left:0;right:0;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;height:100px;z-index:5;
+}
+.lemon-row img{height:100px;width:auto;flex-shrink:0;display:block}
+.lemon-row img+img{margin-left:-28px}
+
+.prog-st{font-family:'Playfair Display',serif;font-style:italic;font-size:26px;color:var(--cream);margin-bottom:10px}
+.pi{padding:16px 0}
+.pt{font-family:'Playfair Display',serif;font-style:italic;font-size:30px;color:var(--cream)}
+.pv{width:1px;height:26px;background:rgba(255,255,255,.25);margin:9px auto}
+.pe{font-size:14px;color:rgba(255,255,255,.82);font-weight:300}
+.pp{font-size:12px;color:rgba(255,255,255,.45);font-style:italic;margin-top:2px}
+
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 8px;margin-top:20px;justify-items:center}
+.cd{width:72px;height:72px;border-radius:50%;margin:0 auto 7px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.cl{font-size:12px;color:var(--tl);font-family:'Cormorant SC',serif;line-height:1.3}
+.de{padding:0 28px 8px;background:var(--cream);text-align:center}
+.de p{font-size:14px;font-weight:300;line-height:1.6;color:var(--tm)}
+.de p+p{margin-top:10px}
+
+.ws{padding:8px 28px 32px;background:var(--cream);text-align:center}
+.wb{background:var(--gd);border-radius:10px;padding:20px 18px;margin-top:14px}
+.wb p{font-size:14px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.85)}
+.wb p+p{margin-top:12px}
+
+.form{background:var(--gd);padding:36px 28px 40px;text-align:center}
+.form .st{color:var(--cream)}
+.ff{width:100%;background:transparent;border:.5px solid rgba(255,255,255,.35);color:#fff;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:300;padding:11px 14px;outline:none;margin-bottom:10px;display:block}
+.ff::placeholder{color:rgba(255,255,255,.38)}
+.ff:focus{border-color:rgba(255,255,255,.7)}
+.rg{display:flex;gap:8px;margin-bottom:10px}
+.rb{flex:1;padding:9px 4px;border:.5px solid rgba(255,255,255,.35);background:transparent;color:rgba(255,255,255,.55);font-family:'Cormorant SC',serif;font-size:12px;letter-spacing:.5px;cursor:pointer;transition:all .2s}
+.rb.on{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.8);color:#fff}
+.sbtn{width:100%;padding:12px;background:var(--cream);border:none;font-family:'Cormorant SC',serif;font-size:13px;letter-spacing:2px;color:var(--gd);cursor:pointer;margin-top:4px}
+.fsuc{display:none;font-family:'Playfair Display',serif;font-style:italic;font-size:22px;color:var(--cream);padding:20px 0}
+
+/* ══ АРКА СНИЗУ ══
+   Зелёный круг, центр на верхнем крае белого блока.
+   Нижняя половина круга видна на белом → выпуклость вниз ✓
+   Белый блок: position:relative, padding-top:215px (место под полукруг), overflow:hidden нет
+   Зелёный круг: position:absolute, top:-215px */
+.ws{padding-bottom:50px}
+.form{padding-bottom:50px}
+
+.sig-wrap{
+  position:relative;
+  background:var(--cream);
+  padding-top:215px; /* место под полукруг */
+  text-align:center;
+  overflow:hidden;
+}
+.arch-bot-circle{
+  position:absolute;
+  top:-215px; left:50%;
+  transform:translateX(-50%);
+  width:430px; height:430px;
+  border-radius:50%;
+  background:var(--gd);
+  z-index:1;
+}
+
+.sl{font-family:'Cormorant SC',serif;font-size:14px;letter-spacing:2px;color:rgba(255,255,255,.5);margin-top:-200px;position: relative; z-index: 2;}
+.sn{font-family:'Playfair Display',serif;font-style:italic;font-size:32px;color:var(--cream);line-height:1.3; z-index: 2;margin-top:20px;position: relative;  }
+</style>
+</head>
+<body>
+
+<!-- ЗЕЛЁНЫЙ БЛОК + АРКА СВЕРХУ -->
+<div class="hero-green">
+  <div class="lemon-top"><img src="./img/lemons2.png"/></div>
+  <div class="arch-top-circle"></div>
+  
+
+
+  <!-- БЕЛЫЙ HERO -->
+  <div class="hero-cream">
+    <div class="hero-names">Виктор<br>&amp; Анастасия</div>
+    <div class="hero-sub">· Приглашение на свадьбу ·</div>
+    <div class="hero-date">25.07.2025</div>
+    <div class="couple-wrap"><img src="./img/couple.jpg"/>
+    <div class="chevron"><svg viewBox="0 0 18 10"><polyline points="1,1 9,9 17,1"/></svg></div>
+  </div>
+</div>
+<div class="s">
+  <div class="st">Дорогие родные и друзья!</div>
+  <p class="sb">С большой радостью приглашаем вас стать частью нашего свадебного торжества и разделить с нами это событие</p>
+  <div class="di">25.07.2025</div>
+  <div class="cal">
+    <div class="cal-h"><span>пн</span><span>вт</span><span>ср</span><span>чт</span><span>пт</span><span>сб</span><span>вс</span></div>
+    <div class="cr"><div class="cc"></div><div class="cc">1</div><div class="cc">2</div><div class="cc">3</div><div class="cc">4</div><div class="cc">5</div><div class="cc">6</div></div>
+    <div class="cr"><div class="cc">7</div><div class="cc">8</div><div class="cc">9</div><div class="cc">10</div><div class="cc">11</div><div class="cc">12</div><div class="cc">13</div></div>
+    <div class="cr"><div class="cc">14</div><div class="cc">15</div><div class="cc">16</div><div class="cc">17</div><div class="cc">18</div><div class="cc">19</div><div class="cc">20</div></div>
+    <div class="cr"><div class="cc">21</div><div class="cc">22</div><div class="cc">23</div><div class="cc">24</div><div class="cc hl"><span>25</span></div><div class="cc">26</div><div class="cc">27</div></div>
+    <div class="cr"><div class="cc">28</div><div class="cc">29</div><div class="cc">30</div><div class="cc">31</div><div class="cc"></div><div class="cc"></div><div class="cc"></div></div>
+  </div>
+</div>
+
+<div class="loc">
+  <div class="st">Место проведения</div>
+  <div class="lg">
+    <div class="li">
+      <div class="lt">Регистрация</div>
+      <div class="ln">Курчатовский отдел ЗАГС</div>
+      <div class="la">г.Челябинск,&nbsp;ул.&nbsp;Молдавская,&nbsp;11</div>
+      <button class="mb">На карте</button>
+    </div>
+    <div class="lsep"></div>
+    <div class="li">
+      <div class="lt">Основное торжество</div>
+      <div class="ln">Досуговый центр «Пегас»</div>
+      <div class="la">г.Челябинск, ул. Блюхера, 56</div>
+      <button class="mb">На карте</button>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAM -->
+<div class="prog-wrap">
+  <div class="lemon-row">
+    <img src="./img/lemons.png"/>
+    <img src="./img/lemons.png"/>
+    <img src="./img/lemons.png"/>
+    <img src="./img/lemons.png"/>
+    <img src="./img/lemons.png"/>
+  </div>
+  <div class="prog-st">Программа</div>
+  <div class="pi"><div class="pt">12:00</div><div class="pv"></div><div class="pe">Торжественная регистрация</div><div class="pp">ЗАГС</div></div>
+  <div class="pi"><div class="pt">13:30</div><div class="pv"></div><div class="pe">Фотосессия с молодожёнами и свободное время</div><div class="pp">Трансфер до ресторана</div></div>
+  <div class="pi"><div class="pt">14:30</div><div class="pv"></div><div class="pe">Лёгкий фуршет</div><div class="pp">Досуговый центр «Пегас»</div></div>
+  <div class="pi"><div class="pt">16:00</div><div class="pv"></div><div class="pe">Банкет</div><div class="pp">Досуговый центр «Пегас»</div></div>
+</div>
+
+<!-- DRESSCODE -->
+<div class="dc-wrap">
+  <div class="lemon-row">
+   <img src="./img/lemons.png"/>
+    <img src="./img/lemons.png"/>
+    <img src="./img/lemons.png"/>
+    <img src="./img/lemons.png"/>
+    
+  </div>
+  <div class="st">Дресс&#8209;код</div>
+  <p class="sb">Будем рады, если в своих образах вы поддержите цветовую палитру нашей свадьбы.</p>
+  <div class="cg">
+    <div><div class="cd" style="background:#E8D44D"></div><div class="cl">Лимонный</div></div>
+    <div><div class="cd" style="background:#F5F0E4;border:1px solid #ddd"></div><div class="cl">Слоновая кость</div></div>
+    <div><div class="cd" style="background:#D4C4A8"></div><div class="cl">Бежевый</div></div>
+    <div><div class="cd" style="background:#8A9E7A"></div><div class="cl">Шалфейный</div></div>
+    <div><div class="cd" style="background:#4E7848"></div><div class="cl">Оливковый</div></div>
+    <div><div class="cd" style="background:#3D2B1A"></div><div class="cl">Кофейный</div></div>
+  </div>
+</div>
+
+<div class="de">
+  <p>При выборе наряда просим по возможности придерживаться указанных оттенков. Чистый белый цвет лучше оставить для невесты, а бежевые тона и оттенки слоновой кости будут особенно уместны.</p>
+  <p>Главное — ваш комфорт и хорошее настроение. Будем рады разделить этот день вместе с вами!</p>
+</div>
+
+<div class="ws">
+  <div class="st">Пожелания</div>
+  <div class="wb">
+    <p>Если вы захотите поздравить нас подарком, мы будем признательны за вклад в наш семейный бюджет в виде денежного подарка.</p>
+    <p>А цветы предлагаем заменить бутылочкой хорошего алкоголя — так ваш подарок будет радовать нас гораздо дольше!</p>
+  </div>
+</div>
+
+<div class="form">
+  <div class="st">Анкета</div>
+  <form id="rf" style="margin-top:16px">
+    <input class="ff" type="text" placeholder="Ваше имя и фамилия" required>
+    <div class="rg">
+      <button type="button" class="rb on" onclick="sel(this)">Приду</button>
+      <button type="button" class="rb" onclick="sel(this)">Не смогу</button>
+      <button type="button" class="rb" onclick="sel(this)">Сообщу позже</button>
+    </div>
+    <input class="ff" type="number" placeholder="Количество гостей" min="1" max="20">
+    <input class="ff" type="text" placeholder="Комментарии">
+    <button type="submit" class="sbtn">Отправить</button>
+  </form>
+  <div class="fsuc" id="fs">Спасибо! Ждём вас ♥</div>
+</div>
+
+<!-- АРКА СНИЗУ: зелёный круг центром на верхней границе белого блока -->
+<div class="sig-wrap">
+  <div class="arch-bot-circle"></div>
+  
+    <div class="sl">С любовью,</div>
+    <div class="sn">Виктор<br>&amp; Анастасия</div>
+  
+</div>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxbyU2ScVBMUe9OIYZdzb4Sek_2IbxFPPVwIyA8uHQskTYTQAH7VjMBDCHibNHiy54Ccg/exec';
+
+function sel(b) {
+  b.closest('.rg').querySelectorAll('.rb').forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+}
+
+document.getElementById('rf').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const form = e.target;
+  const btn = form.querySelector('.sbtn');
+  btn.textContent = 'Отправляем...';
+  btn.disabled = true;
+  
+  const data = {
+    name:    form.querySelector('input[type="text"]').value,
+    status:  form.querySelector('.rb.on').textContent,
+    guests:  form.querySelector('input[type="number"]').value,
+    comment: form.querySelectorAll('input[type="text"]')[1].value
+  };
+  
+  try {
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    });
+    form.style.display = 'none';
+    document.getElementById('fs').style.display = 'block';
+  } catch(err) {
+    btn.textContent = 'Отправить';
+    btn.disabled = false;
+    alert('Ошибка отправки, попробуй ещё раз');
+  }
+});
+</script>
+</body>
+</html>
