@@ -74,9 +74,9 @@ body{background:#ccc8be;font-family:'Cormorant Garamond',serif;max-width:430px;m
 .hl span{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;border:1.5px solid rgba(255,255,255,.9);color:#fff}
 
 .loc{padding:28px 28px;background:var(--cream);text-align:center}
-.lg{display:grid;grid-template-columns:1fr 1px 1fr;margin-top:14px;align-items:start}
+.lg{display:grid;grid-template-columns:1fr 1px 1fr;margin-top:14px;align-items:stretch}
 .lsep{background:rgba(46,67,48,.22);align-self:stretch}
-.li{padding:0 14px;text-align:center}
+.li{padding:0 14px;text-align:center;display:flex;flex-direction:column;align-items:center}
 .lt{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:var(--gd);margin-bottom:7px}
 .ln,.la{font-size:13px;font-weight:300;line-height:1.5;color:var(--tm)}
 .mb{display:inline-block;margin-top:10px;padding:7px 20px;background:var(--gd);color:#fff;font-family:'Cormorant SC',serif;font-size:11px;letter-spacing:1.5px;border:none;border-radius:20px;cursor:pointer}
@@ -266,7 +266,7 @@ body{background:#ccc8be;font-family:'Cormorant Garamond',serif;max-width:430px;m
       <button type="button" class="rb" onclick="sel(this)">Не смогу</button>
       <button type="button" class="rb" onclick="sel(this)">Сообщу позже</button>
     </div>
-    <input class="ff" type="number" placeholder="Количество гостей" min="1" max="20">
+    <input id="guests-field" class="ff" type="number" placeholder="Количество гостей" min="1" max="20">
     <input class="ff" type="text" placeholder="Комментарии">
     <button type="submit" class="sbtn">Отправить</button>
   </form>
@@ -281,45 +281,7 @@ body{background:#ccc8be;font-family:'Cormorant Garamond',serif;max-width:430px;m
     <div class="sn">Виктор<br>&amp; Анастасия</div>
   
 </div>
-
-<script>
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyHihUvl6CKow7qzbIG7MHtp88cdLwoUDOHWLTayA97PMXP-A7H4LKcwH9n8Z7_wA3i-g/exec';
-
-function sel(b) {
-  b.closest('.rg').querySelectorAll('.rb').forEach(x => x.classList.remove('on'));
-  b.classList.add('on');
-}
-
-document.getElementById('rf').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  
-  const form = e.target;
-  const btn = form.querySelector('.sbtn');
-  btn.textContent = 'Отправляем...';
-  btn.disabled = true;
-  
-  const data = {
-    name:    form.querySelector('input[type="text"]').value,
-    status:  form.querySelector('.rb.on').textContent,
-    guests:  form.querySelector('input[type="number"]').value,
-    comment: form.querySelectorAll('input[type="text"]')[1].value
-  };
-  
-  try {
-    await fetch(SCRIPT_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(data)
-    });
-    form.style.display = 'none';
-    document.getElementById('fs').style.display = 'block';
-  } catch(err) {
-    btn.textContent = 'Отправить';
-    btn.disabled = false;
-    alert('Ошибка отправки, попробуй ещё раз');
-  }
-});
-</script>
+<script src="./config.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
